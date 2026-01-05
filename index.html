@@ -24,11 +24,14 @@
         --shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
       }
 
-      * { box-sizing: border-box; }
+      * {
+        box-sizing: border-box;
+      }
 
       body {
         margin: 0;
-        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial,
+          sans-serif;
         color: var(--text);
         min-height: 100vh;
         overflow-x: hidden;
@@ -71,7 +74,7 @@
       /* Card (glass) */
       .card {
         width: 100%;
-        background: rgba(15, 15, 16, 0.50);
+        background: rgba(15, 15, 16, 0.5);
         border: 1px solid var(--stroke);
         border-radius: 18px;
         padding: 20px 18px;
@@ -91,13 +94,13 @@
         border-radius: 18px;
         background: linear-gradient(
           135deg,
-          rgba(255,255,255,.12),
-          rgba(255,255,255,0) 38%,
-          rgba(255,255,255,.07) 62%,
-          rgba(255,255,255,0)
+          rgba(255, 255, 255, 0.12),
+          rgba(255, 255, 255, 0) 38%,
+          rgba(255, 255, 255, 0.07) 62%,
+          rgba(255, 255, 255, 0)
         );
         pointer-events: none;
-        opacity: .55;
+        opacity: 0.55;
       }
 
       .profile {
@@ -134,7 +137,6 @@
         flex-direction: column;
         gap: 10px;
         margin-top: 16px;
-        
       }
 
       /* Glass buttons */
@@ -179,11 +181,21 @@
       }
 
       /* Brand colors for icons */
-      .fa-instagram { color: #E4405F; } /* Instagram */
-      .fa-telegram  { color: #2AABEE; } /* Telegram */
-      .fa-whatsapp  { color: #25D366; } /* WhatsApp */
-      .fa-envelope  { color: rgba(255,255,255,.92); }
-      .fa-globe     { color: rgba(255,255,255,.92); }
+      .fa-instagram {
+        color: #e4405f;
+      } /* Instagram */
+      .fa-telegram {
+        color: #2aabee;
+      } /* Telegram */
+      .fa-whatsapp {
+        color: #25d366;
+      } /* WhatsApp */
+      .fa-envelope {
+        color: rgba(255, 255, 255, 0.92);
+      }
+      .fa-globe {
+        color: rgba(255, 255, 255, 0.92);
+      }
 
       /* Shine animation on buttons */
       a.btn::before {
@@ -195,35 +207,57 @@
         height: 190%;
         background: linear-gradient(
           120deg,
-          rgba(255,255,255,0) 0%,
-          rgba(255,255,255,.18) 35%,
-          rgba(255,255,255,.08) 55%,
-          rgba(255,255,255,0) 100%
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.18) 35%,
+          rgba(255, 255, 255, 0.08) 55%,
+          rgba(255, 255, 255, 0) 100%
         );
         transform: rotate(18deg);
-        opacity: 0.0;
+        opacity: 0;
         pointer-events: none;
         animation: shine 3.1s ease-in-out infinite;
       }
 
       @keyframes shine {
-        0%   { transform: translateX(-160%) rotate(18deg); opacity: 0; }
-        12%  { opacity: .85; }
-        30%  { transform: translateX(280%) rotate(18deg); opacity: 0; }
-        100% { transform: translateX(280%) rotate(18deg); opacity: 0; }
+        0% {
+          transform: translateX(-160%) rotate(18deg);
+          opacity: 0;
+        }
+        12% {
+          opacity: 0.85;
+        }
+        30% {
+          transform: translateX(280%) rotate(18deg);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(280%) rotate(18deg);
+          opacity: 0;
+        }
       }
 
       /* Optional: reduce motion for accessibility */
       @media (prefers-reduced-motion: reduce) {
-        a.btn::before { animation: none; }
-        a.btn { transition: none; }
+        a.btn::before {
+          animation: none;
+        }
+        a.btn {
+          transition: none;
+        }
       }
     </style>
   </head>
 
   <body>
     <div class="bg">
-      <video autoplay muted loop playsinline preload="auto" poster="assets/poster.jpg">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        poster="assets/poster.jpg"
+      >
         <source src="assets/bg.mp4" type="video/mp4" />
       </video>
     </div>
@@ -235,29 +269,36 @@
           <img class="avatar" src="assets/ava.jpg" alt="Avatar" />
           <h1>Emirate Watch</h1>
           <p class="bio">
-            Мультибрендовый магазин часов⌚️<br />
-            Гарантия на всю продукцию от 3 до 8 лет ✅<br />
-            Доставка по всему Узбекистану 🌍<br />
-            Высокое качество💯
+            🌎| WORLWIDE delivery <br/>💳| PayPal / Crypto Trusted dealer <br/>❗️| Not
+            affiliated with any brand!
           </p>
         </div>
 
         <div class="links">
-          <a class="btn"
-             href="https://www.instagram.com/emirate.watch?igsh=MXRjdm5qendocnExdA=="
-             target="_blank" rel="noreferrer">
+          <a
+            class="btn"
+            href="https://www.instagram.com/emirate.watch?igsh=MXRjdm5qendocnExdA=="
+            target="_blank"
+            rel="noreferrer"
+          >
             <i class="fa-brands fa-instagram"></i> Instagram
           </a>
 
-          <a class="btn"
-             href="https://t.me/wtcuzbekistan1"
-             target="_blank" rel="noreferrer">
+          <a
+            class="btn"
+            href="https://t.me/wtcuzbekistan1"
+            target="_blank"
+            rel="noreferrer"
+          >
             <i class="fa-brands fa-telegram"></i> Telegram
           </a>
 
-          <a class="btn"
-             href="https://wa.me/998901234567"
-             target="_blank" rel="noreferrer">
+          <a
+            class="btn"
+            href="https://wa.me/998909833999"
+            target="_blank"
+            rel="noreferrer"
+          >
             <i class="fa-brands fa-whatsapp"></i> WhatsApp
           </a>
 
